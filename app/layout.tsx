@@ -1,9 +1,11 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import '@mantine/core/styles.css';
 import './globals.css';
+
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import type { Metadata } from 'next';
 import React from 'react';
 
-const inter = Inter({ subsets: ['latin'] });
+import { StoryLayout } from '@/layout/StoryLayout';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +19,14 @@ interface RootLayoutProps {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <ColorSchemeScript />
+      </head>
+      <body>
+        <MantineProvider>
+          <StoryLayout>{children}</StoryLayout>
+        </MantineProvider>
+      </body>
     </html>
   );
 };

@@ -1,4 +1,5 @@
-
+Day-4
+1. create dynamic link for each card, title should be the link with(-) in between
 
 Day-3
 1. watch code evalution videos from 11 to 20
