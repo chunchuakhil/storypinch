@@ -15,7 +15,6 @@ import Link from 'next/link';
 import React from 'react';
 
 import { gotoStoryIdPage } from '@/router/router';
-import { getFirstWords } from '@/trimStory';
 import { type IStory } from '@/types/Story';
 
 const StoryCard: React.FC<IStory> = ({ genre, story, title, id }) => {
@@ -44,7 +43,7 @@ const StoryCard: React.FC<IStory> = ({ genre, story, title, id }) => {
 
       <Flex direction={'column'} justify={'space-between'}>
         <Text size="sm" c="dimmed" lineClamp={5}>
-          {getFirstWords(story.join(' '))}
+          {story.join(' ')}
         </Text>
         <Link href={gotoStoryIdPage(id)}>
           <Button color="blue" fullWidth mt="md" radius="md">
