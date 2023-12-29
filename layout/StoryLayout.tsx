@@ -1,21 +1,51 @@
 'use client';
 
-import { AppShell, Burger, Group, Skeleton } from '@mantine/core';
+import { AppShell, Burger, Group, Paper, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import React from 'react';
+import {
+  IconBrain,
+  IconCalendarStats,
+  IconDeviceDesktopAnalytics,
+  IconHome2,
+} from '@tabler/icons-react';
+import Link from 'next/link';
+import React, { useState } from 'react';
+
+import {
+  gotoAppHomePage,
+  gotoQuizHomePage,
+  gotoStoryHomePage,
+  gotoUpdatesHomePage,
+} from '@/router/router';
 
 interface StoryLayoutProps {
   children: React.ReactNode;
 }
 
+const appSideBarNavigation = [
+  { icon: IconHome2, label: 'Home', goto: gotoAppHomePage() },
+  { icon: IconBrain, label: 'Quiz', goto: gotoQuizHomePage() },
+  {
+    icon: IconDeviceDesktopAnalytics,
+    label: 'Stories',
+    goto: gotoStoryHomePage(),
+  },
+  { icon: IconCalendarStats, label: 'Updates', goto: gotoUpdatesHomePage() },
+];
+
 export const StoryLayout: React.FC<StoryLayoutProps> = ({ children }) => {
   const [opened, { toggle }] = useDisclosure();
+  const [active, setActive] = useState(0);
+
+  React.useEffect(() => {
+    console.log('active', active);
+  }, [active]);
 
   return (
     <AppShell
       header={{ height: 60 }}
       footer={{ height: 60 }}
-      navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !opened } }}
+      navbar={{ width: 230, breakpoint: 'sm', collapsed: { mobile: !opened } }}
       aside={{
         width: 200,
         breakpoint: 'md',
@@ -26,16 +56,29 @@ export const StoryLayout: React.FC<StoryLayoutProps> = ({ children }) => {
       <AppShell.Header>
         <Group h="100%" px="md">
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          {/* <MantineLogo size={30} /> */}
         </Group>
       </AppShell.Header>
       <AppShell.Navbar p="md">
-        Navbar
-        {Array(15)
-          .fill(0)
-          .map((_, index) => (
-            <Skeleton key={index} h={28} mt="sm" animate={false} />
-          ))}
+        {appSideBarNavigation.map((item, index) => {
+          return (
+            <Link
+              href={item.goto}
+              key={index}
+              onClick={() => {
+                setActive(index);
+              }}
+            >
+              <Paper
+                shadow="xs"
+                p="xs"
+                bg={index === active ? 'blue' : ''}
+                mb={'xs'}
+              >
+                <Text>{item.label}</Text>
+              </Paper>
+            </Link>
+          );
+        })}
       </AppShell.Navbar>
       <AppShell.Main>
         {/* Aside is hidden on on md breakpoint and cannot be opened when it is
