@@ -1,5 +1,6 @@
 import { Button, Flex, Group, Paper, Radio } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import { IconDiscountCheckFilled } from '@tabler/icons-react';
 import React, { useState } from 'react';
 
 import { type IQuestion } from '@/types/Question';
@@ -11,7 +12,7 @@ const QuizQuestion: React.FC<IQuizQuestionProps> = ({
   options,
   answer,
 }) => {
-  const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean>(false);
 
   const form = useForm({
     initialValues: {
@@ -24,18 +25,19 @@ const QuizQuestion: React.FC<IQuizQuestionProps> = ({
         }
         const isCorrect = value === answer;
         setIsAnswerCorrect(isCorrect);
-        return isCorrect ? undefined : 'Incorrect answer';
+        return isCorrect ? undefined : (
+          <div style={{ marginTop: '10px' }}>{'Incorrect answer'}</div>
+        );
       },
     },
   });
 
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  const handleSubmit = () => {
+  const handleSubmit: () => void = () => {
     form.validate();
   };
 
   return (
-    <Paper bg={isAnswerCorrect === true ? 'green' : 'white'} mx={'xl'}>
+    <Paper mx={'xl'}>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -58,7 +60,21 @@ const QuizQuestion: React.FC<IQuizQuestionProps> = ({
               wrap="wrap"
             >
               {options.map((option, index) => {
-                return <Radio key={index} value={option} label={option} />;
+                return (
+                  <div
+                    key={index}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                    }}
+                  >
+                    <Radio key={index} value={option} label={option} />
+                    {isAnswerCorrect && answer === option && (
+                      <IconDiscountCheckFilled style={{ color: 'green' }} />
+                    )}
+                  </div>
+                );
               })}
             </Flex>
           </Group>
