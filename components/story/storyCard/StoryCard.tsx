@@ -1,25 +1,14 @@
 /* eslint-disable sort-imports */
 'use client';
-import {
-  Badge,
-  Button,
-  Card,
-  Flex,
-  Group,
-  Image,
-  rem,
-  Text,
-} from '@mantine/core';
-import { IconHeartFilled } from '@tabler/icons-react';
+import { Badge, Button, Card, Flex, Group, Image, Text } from '@mantine/core';
 import Link from 'next/link';
 import React from 'react';
 
 import { gotoStoryIdPage } from '@/router/router';
 import { type IStory } from '@/types/Story';
+import ShowStoryIcon from '@/utils/ShowStoryIcon';
 
 const StoryCard: React.FC<IStory> = ({ genre, story, title, id }) => {
-  const icon = <IconHeartFilled style={{ width: rem(12), height: rem(12) }} />;
-
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder maw={250} mih={430}>
       <Card.Section>
@@ -35,7 +24,7 @@ const StoryCard: React.FC<IStory> = ({ genre, story, title, id }) => {
           <Text mb={20} fw={500}>
             {title}
           </Text>
-          <Badge leftSection={icon} color="blue">
+          <Badge leftSection={<ShowStoryIcon genre={genre} />} color="blue">
             {genre}
           </Badge>
         </Flex>
