@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     <main className="flex min-h-screen flex-col items-center justify-between p-2">
       <Container size="lg">
         <Title order={1} mb={30}>
-          Welcome to Learn with dopamine
+          Welcome Screen
         </Title>
       </Container>
     </main>
