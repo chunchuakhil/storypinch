@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Who is credited with inventing the telephone?",
+    "options": [
+      "Thomas Edison",
+      "Alexander Graham Bell",
+      "Nikola Tesla",
+      "Galileo Galilei"
+    ],
+    "answer": "Alexander Graham Bell"
+  },
+  {
+    "question": "What invention is Thomas Edison most famous for?",
+    "options": ["Light bulb", "Telephone", "Radio", "Television"],
+    "answer": "Light bulb"
+  },
+  {
+    "question": "Who is the inventor of the World Wide Web (WWW)?",
+    "options": [
+      "Tim Berners-Lee",
+      "Mark Zuckerberg",
+      "Bill Gates",
+      "Steve Jobs"
+    ],
+    "answer": "Tim Berners-Lee"
+  },
+  {
+    "question": "What is the name of the first practical video game console?",
+    "options": [
+      "PlayStation",
+      "Xbox",
+      "Atari 2600",
+      "Nintendo Entertainment System (NES)"
+    ],
+    "answer": "Atari 2600"
+  },
+  {
+    "question": "Who invented the first successful mechanical computer?",
+    "options": [
+      "Charles Babbage",
+      "Ada Lovelace",
+      "Alan Turing",
+      "John von Neumann"
+    ],
+    "answer": "Charles Babbage"
+  },
+  {
+    "question": "What invention is credited to the Wright brothers?",
+    "options": ["Automobile", "Television", "Airplane", "Submarine"],
+    "answer": "Airplane"
+  },
+  {
+    "question": "Who is known for the invention of the printing press?",
+    "options": ["Gutenberg", "Newton", "Galileo", "Einstein"],
+    "answer": "Gutenberg"
+  },
+  {
+    "question": "What invention is Nikola Tesla most famous for?",
+    "options": ["Telephone", "Electricity", "Steam engine", "Photography"],
+    "answer": "Electricity"
+  },
+  {
+    "question": "Who invented the first practical telephone camera?",
+    "options": [
+      "Steve Jobs",
+      "Mark Zuckerberg",
+      "Tim Berners-Lee",
+      "Philippe Kahn"
+    ],
+    "answer": "Philippe Kahn"
+  },
+  {
+    "question": "What invention is Marie Curie known for?",
+    "options": ["X-ray machine", "Penicillin", "Radar", "Vaccine"],
+    "answer": "X-ray machine"
+  }
+]
