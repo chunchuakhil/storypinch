@@ -1,18 +1,14 @@
-Day-4
-1. create dynamic link for each card, title should be the link with(-) in between
-2. https://ui.mantine.dev/category/navbars/ update sidebar
 
-Day-3
-1. watch code evalution videos from 11 to 20
-2. based on that deside component library
+1. Todo--> create dynamic link for each card, title should be the link with(-) in between
+2. Done--> https://ui.mantine.dev/category/navbars/ update sidebar
 
-Day-2
-1. install eslint
-2. install prettier
-3. make sure tailwind is working
-4. set standard rules on eslint
-5. understand folder structure
+1. Done--> based on that deside component library
 
-Day-1
-1. Insall nextjs app
-2. give it a name
+1. Done--> install eslint
+2. Done--> install prettier
+3. Todo--> make sure tailwind is working
+4. Done--> set standard rules on eslint
+5. Done--> understand folder structure
+
+1. Done--> Insall nextjs app
+2. Done--> give it a name
