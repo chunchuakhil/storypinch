@@ -1,3 +1,4 @@
+'use client';
 import { Button, Flex, Group, Paper, Radio } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { IconDiscountCheckFilled } from '@tabler/icons-react';
@@ -26,7 +27,7 @@ const QuizQuestion: React.FC<IQuizQuestionProps> = ({
         const isCorrect = value === answer;
         setIsAnswerCorrect(isCorrect);
         return isCorrect ? undefined : (
-          <div style={{ marginTop: '10px' }}>{'Incorrect answer'}</div>
+          <div className="mt-3">{'Incorrect answer'}</div>
         );
       },
     },
@@ -71,7 +72,7 @@ const QuizQuestion: React.FC<IQuizQuestionProps> = ({
                   >
                     <Radio key={index} value={option} label={option} />
                     {isAnswerCorrect && answer === option && (
-                      <IconDiscountCheckFilled style={{ color: 'green' }} />
+                      <IconDiscountCheckFilled className="bg-green-400" />
                     )}
                   </div>
                 );

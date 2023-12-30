@@ -1,6 +1,6 @@
 import React from 'react';
 
-import StoryDetailsPage from '@/pages/story/storyDetailsPage/StoryDetailsPage';
+import StoryDetailsPage from '@/screen/story/storyDetailsPage/StoryDetailsPage';
 
 const page: React.FC = () => {
   return <StoryDetailsPage />;

@@ -1,3 +1,5 @@
+'use client';
+
 import '@mantine/core/styles.css';
 import './globals.css';
 

@@ -1,5 +1,4 @@
 /* eslint-disable sort-imports */
-'use client';
 import { Badge, Button, Card, Flex, Group, Image, Text } from '@mantine/core';
 import Link from 'next/link';
 import React from 'react';
@@ -35,7 +34,7 @@ const StoryCard: React.FC<IStory> = ({ genre, story, title, id }) => {
           {story.join(' ')}
         </Text>
         <Link href={gotoStoryIdPage(id)}>
-          <Button color="blue" fullWidth mt="md" radius="md">
+          <Button fullWidth mt="md" radius="md">
             Read more
           </Button>
         </Link>
