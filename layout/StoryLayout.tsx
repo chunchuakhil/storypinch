@@ -37,10 +37,6 @@ export const StoryLayout: React.FC<StoryLayoutProps> = ({ children }) => {
   const [opened, { toggle }] = useDisclosure();
   const [active, setActive] = useState(0);
 
-  React.useEffect(() => {
-    console.log('active', active);
-  }, [active]);
-
   return (
     <AppShell
       header={{ height: 60 }}

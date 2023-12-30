@@ -72,7 +72,10 @@ const QuizQuestion: React.FC<IQuizQuestionProps> = ({
                   >
                     <Radio key={index} value={option} label={option} />
                     {isAnswerCorrect && answer === option && (
-                      <IconDiscountCheckFilled className="bg-green-400" />
+                      <IconDiscountCheckFilled
+                        color="green"
+                        className="text-green-700"
+                      />
                     )}
                   </div>
                 );
