@@ -2,8 +2,8 @@ import { Button, Title } from '@mantine/core';
 import Link from 'next/link';
 import React from 'react';
 
-import StoryListPage from '@/pages/story/storieListPage/StoryListPage';
 import { gotoAppHomePage } from '@/router/router';
+import StoryListPage from '@/screen/story/storieListPage/StoryListPage';
 
 const StoryPage: React.FC = () => {
   return (
