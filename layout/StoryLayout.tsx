@@ -1,6 +1,6 @@
 'use client';
 
-import { AppShell, Burger, Group, Paper, Text } from '@mantine/core';
+import { AppShell, Burger, Group, Paper, Text, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import {
   IconBrain,
@@ -8,6 +8,7 @@ import {
   IconDeviceDesktopAnalytics,
   IconHome2,
 } from '@tabler/icons-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
@@ -52,6 +53,8 @@ export const StoryLayout: React.FC<StoryLayoutProps> = ({ children }) => {
       <AppShell.Header>
         <Group h="100%" px="md">
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+          <Image src="/light-bulb.png" alt="logo" width={40} height={40} />
+          <Title order={3}>Story Pinch</Title>
         </Group>
       </AppShell.Header>
       <AppShell.Navbar p="md">
