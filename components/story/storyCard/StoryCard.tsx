@@ -34,7 +34,7 @@ const StoryCard: React.FC<IStory> = ({ genre, story, title, id }) => {
           {story.join(' ')}
         </Text>
         <Link href={gotoStoryIdPage(id)}>
-          <Button fullWidth mt="md" radius="md">
+          <Button fullWidth mt="md" radius="md" variant="light">
             Read more
           </Button>
         </Link>

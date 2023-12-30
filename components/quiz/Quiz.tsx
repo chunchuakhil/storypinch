@@ -25,7 +25,7 @@ const Quiz: React.FC = () => {
           </Flex>
         </Group>
       </Radio.Group>
-      <Button variant="filled" mt={'sm'}>
+      <Button variant="default" mt={'sm'}>
         Submit
       </Button>
     </Paper>
