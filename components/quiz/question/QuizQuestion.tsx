@@ -83,7 +83,7 @@ const QuizQuestion: React.FC<IQuizQuestionProps> = ({
             </Flex>
           </Group>
         </Radio.Group>
-        <Button type="submit" variant="filled" mt="lg" mb={'xl'}>
+        <Button type="submit" variant="light" mt="lg" mb={'xl'}>
           Submit
         </Button>
       </form>
