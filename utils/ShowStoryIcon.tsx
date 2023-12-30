@@ -13,15 +13,19 @@ interface ShowStoryIconProps {
 
 const iconsStyles = { width: rem(12), height: rem(12) };
 
-const ShowStoryIcon: React.FC<ShowStoryIconProps> = ({ genre }) => {
-  const genreIcon = {
+const ShowStoryIcon: React.FC<ShowStoryIconProps> = ({ genre = '' }) => {
+  const genreIcon: Record<string, JSX.Element> = {
     Fantasy: <IconChartAreaFilled style={iconsStyles} />,
     'Candlelit Confessions': <IconArticle style={iconsStyles} />,
     Romance: <IconHeartFilled style={iconsStyles} />,
     Adventure: <IconAirBalloon style={iconsStyles} />,
   };
 
-  return genreIcon[genre] || <IconArticle style={iconsStyles} />;
+  if (genreIcon[genre] !== undefined) {
+    return genreIcon[genre];
+  }
+
+  return <IconArticle style={iconsStyles} />;
 };
 
 export default ShowStoryIcon;
