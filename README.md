@@ -20,6 +20,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 9. Google Analytics or any other free tool.
 10. PWA ( optional )
 11. Web Accessibility ( optional )
+12. implement next auth.
+13. role based features.
+14. role based features on dev, prod environment.
+15. feature flag
 
 ## Getting Started
 
