@@ -19,3 +19,7 @@ export const gotoSettingsHomePage = (): string => {
 export const gotoUpdatesHomePage = (): string => {
   return '/updates';
 };
+
+export const gotoLoginPage = (): string => {
+  return '/login';
+};
