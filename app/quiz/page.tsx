@@ -1,6 +1,6 @@
 import React from 'react';
 
-import QuizConductPage from '@/screen/quiz/quizConductPage/QuizConductPage';
+import QuizConductPage from '@/views/quiz/quizConductPage/QuizConductPage';
 
 const page: React.FC = () => {
   return <QuizConductPage />;
