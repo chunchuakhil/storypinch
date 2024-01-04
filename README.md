@@ -1,9 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Project Name : StoryPinch
+
 - The main idea of this project is to learn nextjs & react concepts, along with whole eco-system of the web development.
 
 ### Initially planned User Stories:
+
 1. User should able to see Story section with multiple geners, able to select a story and read it in a new page.
 2. User should able to see Quiz section with multiple topics, select a topic and play with it.
 
@@ -35,3 +37,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Understanding folder & file structure:
+
+1. page.tsx -> It is only responsible for gathering routes info, routePaths & route props. or any page translations.
+2. View folder -> It is just a compose functionaliites ( just gather all functionality in one place), not to implement any functionality directly.
+3. components folder -> Is should have main feature, like form implementation, table, filter section etc...
