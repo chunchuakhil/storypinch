@@ -1,16 +1,15 @@
 'use client';
 
 import { Paper, Text, Title } from '@mantine/core';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 import storyData from '@/data/story/story.json';
 
 const StoryDetailsView: React.FC = () => {
-  const paramsStoryId = '1';
-  if (typeof paramsStoryId !== 'string') {
-    // Handle the case where storyId is not a string
-    return <div>Invalid story ID</div>;
-  }
+  const path = usePathname();
+
+  const paramsStoryId = path.split('/').pop();
 
   const selectedStory = storyData.find((story) => story.id === paramsStoryId);
 
