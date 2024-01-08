@@ -4,9 +4,13 @@ import { Flex } from '@mantine/core';
 import React from 'react';
 
 import StoryCard from '@/components/story/storyCard/StoryCard';
-import storyList from '@/data/story/story.json';
+import { type IStory } from '@/types/Story';
 
-const StoryListPage: React.FC = () => {
+interface IStoryListPageProps {
+  storyList: IStory[];
+}
+
+const StoryListPage: React.FC<IStoryListPageProps> = ({ storyList }) => {
   return (
     <Flex
       gap="xl"
