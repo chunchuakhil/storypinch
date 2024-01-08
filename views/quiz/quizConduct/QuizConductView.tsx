@@ -4,9 +4,9 @@ import React from 'react';
 import QuizQuestion from '@/components/quiz/question/QuizQuestion';
 import quizData from '@/data/quiz/quizData.json';
 
-const QuizConductPage: React.FC = () => {
+const QuizConductView: React.FC = () => {
   return (
-    <div>
+    <>
       {quizData.map((item, index) => {
         return (
           <QuizQuestion
@@ -17,8 +17,8 @@ const QuizConductPage: React.FC = () => {
           />
         );
       })}
-    </div>
+    </>
   );
 };
 
-export default QuizConductPage;
+export default QuizConductView;
