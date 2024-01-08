@@ -5,7 +5,7 @@ import React from 'react';
 
 import storyData from '@/data/story/story.json';
 
-const StoryDetailsPage: React.FC = () => {
+const StoryDetailsView: React.FC = () => {
   const paramsStoryId = '1';
   if (typeof paramsStoryId !== 'string') {
     // Handle the case where storyId is not a string
@@ -34,4 +34,4 @@ const StoryDetailsPage: React.FC = () => {
   );
 };
 
-export default StoryDetailsPage;
+export default StoryDetailsView;

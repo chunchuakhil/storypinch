@@ -1,9 +1,15 @@
 import React from 'react';
 
-import QuizConductPage from '@/views/quiz/quizConductPage/QuizConductPage';
+import PageHeading from '@/components/pageHeading/PageHeading';
+import QuizConductView from '@/views/quiz/quizConduct/QuizConductView';
 
-const page: React.FC = () => {
-  return <QuizConductPage />;
+const QuizPage: React.FC = () => {
+  return (
+    <>
+      <PageHeading title="Quiz page" />
+      <QuizConductView />;
+    </>
+  );
 };
 
-export default page;
+export default QuizPage;

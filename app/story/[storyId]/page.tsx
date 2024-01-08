@@ -1,9 +1,9 @@
 import React from 'react';
 
-import StoryDetailsPage from '@/views/story/storyDetailsPage/StoryDetailsPage';
+import StoryDetailsView from '@/views/story/storyDetails/StoryDetailsView';
 
-const page: React.FC = () => {
-  return <StoryDetailsPage />;
+const StoryDetailsPage: React.FC = () => {
+  return <StoryDetailsView />;
 };
 
-export default page;
+export default StoryDetailsPage;
