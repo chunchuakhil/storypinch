@@ -2,7 +2,7 @@ import React from 'react';
 
 import Login from '@/components/login/Login';
 
-const page: React.FC = () => {
+const LoginView: React.FC = () => {
   return (
     <div>
       <Login />
@@ -10,4 +10,4 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default LoginView;
