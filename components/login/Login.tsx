@@ -19,12 +19,12 @@ import { gotoStoryHomePage } from '@/router/router';
 
 const Login: React.FC = () => {
   const router = useRouter();
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
-    if (email === 'admin1@test.com' && password === 'admin1') {
+    if (username === 'admin1' && password === 'admin1') {
       router.push(gotoStoryHomePage());
     }
   };
@@ -42,12 +42,13 @@ const Login: React.FC = () => {
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
         <form onSubmit={handleSubmit}>
           <TextInput
-            label="Email"
+            type="text"
+            label="Username"
             placeholder="you@mantine.dev"
             required
-            value={email}
+            value={username}
             onChange={(e) => {
-              setEmail(e.target.value);
+              setUsername(e.target.value);
             }}
           />
           <PasswordInput
