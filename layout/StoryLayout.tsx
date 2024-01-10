@@ -1,14 +1,6 @@
 'use client';
 
-import {
-  AppShell,
-  Burger,
-  Button,
-  Group,
-  Paper,
-  Text,
-  Title,
-} from '@mantine/core';
+import { AppShell, Burger, Group, Paper, Text, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import {
   IconBrain,
@@ -22,7 +14,6 @@ import React, { useState } from 'react';
 
 import {
   gotoAppHomePage,
-  gotoLoginPage,
   gotoQuizHomePage,
   gotoStoryHomePage,
   gotoUpdatesHomePage,
@@ -87,9 +78,6 @@ export const StoryLayout: React.FC<StoryLayoutProps> = ({ children }) => {
             </Link>
           );
         })}
-        <Link href={gotoLoginPage()}>
-          <Button>Login</Button>
-        </Link>
       </AppShell.Navbar>
       <AppShell.Main>
         {/* Aside is hidden on on md breakpoint and cannot be opened when it is

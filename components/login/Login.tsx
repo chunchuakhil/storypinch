@@ -15,6 +15,8 @@ import {
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
+import { gotoStoryHomePage } from '@/router/router';
+
 const Login: React.FC = () => {
   const router = useRouter();
   const [email, setEmail] = useState('');
@@ -23,7 +25,7 @@ const Login: React.FC = () => {
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
     if (email === 'admin1@test.com' && password === 'admin1') {
-      router.push('/');
+      router.push(gotoStoryHomePage());
     }
   };
 

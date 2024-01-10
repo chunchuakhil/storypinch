@@ -1,25 +1,26 @@
 export const gotoAppHomePage = (): string => {
-  return '/';
+  return '/private/dashboard';
 };
 
+// story section
 export const gotoStoryHomePage = (): string => {
-  return `/story`;
+  return `/private/story`;
 };
 export const gotoStoryIdPage = (id: string): string => {
-  return `/story/${id}`;
+  return `/private/story/${id}`;
 };
 
+// quiz section
 export const gotoQuizHomePage = (): string => {
-  return '/quiz';
+  return '/private/quiz';
 };
 
-export const gotoSettingsHomePage = (): string => {
-  return '/';
-};
+// updates section
 export const gotoUpdatesHomePage = (): string => {
-  return '/updates';
+  return '/private/updates';
 };
 
+// auth section
 export const gotoLoginPage = (): string => {
   return '/login';
 };
