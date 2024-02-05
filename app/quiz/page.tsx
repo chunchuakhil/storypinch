@@ -1,13 +1,13 @@
 import React from 'react';
 
 import PageHeading from '@/components/pageHeading/PageHeading';
-import QuizConductView from '@/views/quiz/quizConduct/QuizConductView';
+import QuizListView from '@/views/quiz/quizList/QuizListView';
 
 const QuizPage: React.FC = () => {
   return (
     <>
       <PageHeading title="Quiz page" />
-      <QuizConductView />;
+      <QuizListView />
     </>
   );
 };

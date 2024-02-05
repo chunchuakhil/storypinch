@@ -1,23 +1,26 @@
 export const gotoAppHomePage = (): string => {
-  return '/private/dashboard';
+  return '/dashboard';
 };
 
 // story section
 export const gotoStoryHomePage = (): string => {
-  return `/private/story`;
+  return `/story`;
 };
 export const gotoStoryIdPage = (id: string): string => {
-  return `/private/story/${id}`;
+  return `/story/${id}`;
 };
 
 // quiz section
 export const gotoQuizHomePage = (): string => {
-  return '/private/quiz';
+  return '/quiz';
+};
+export const gotoQuizStartPage = (): string => {
+  return '/quiz/start';
 };
 
 // updates section
 export const gotoUpdatesHomePage = (): string => {
-  return '/private/updates';
+  return '/updates';
 };
 
 // auth section
